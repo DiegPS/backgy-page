@@ -6,10 +6,10 @@ import IconPreview from "../components/IconPreview.astro"
 <article content-to-copy class="relative min-h-72 w-full overflow-hidden shadow-xl rounded-md">
     <slot />
     <footer class="absolute bottom-0 right-0 gap-1 z-10">
-        <button button-preview class="hover:cursor-pointer p-1 backdrop-brightness-50">
+        <button button-preview class="shadow-xl rounded-md hover:cursor-pointer p-1 backdrop-brightness-50">
             <IconPreview  class="text-slate-200"/>
         </button>
-        <button button-copy class="hover:cursor-pointer p-1 backdrop-brightness-50">
+        <button button-copy class="shadow-xl rounded-md mr-1 hover:cursor-pointer p-1 backdrop-brightness-50">
             <IconCopy  class="text-slate-200"/>
         </button>
     </footer>
