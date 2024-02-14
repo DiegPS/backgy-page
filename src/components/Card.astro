@@ -10,26 +10,28 @@ const { backgroundTW, backgroundCSS } = Astro.props;
   <footer class="absolute right-0 flex gap-1 z-10 mr-1 mt-1">
     <button
       button-preview
-      class="rounded-md hover:cursor-pointer hover:scale-110 p-2 backdrop-brightness-50"
+      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
       value={backgroundTW}
     >
-      <IconPreview class="text-slate-200" />
+      <IconPreview class="text-purple-300" />
+      <p class="text-purple-300 text-xs font-semibold absolute right-1 top-0">VER</p>
+      
     </button>
     <button
       button-copy-to-css
       value={backgroundCSS}
-      class="rounded-md hover:cursor-pointer hover:scale-110 p-2 backdrop-brightness-50"
+      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
     >
-      <IconCopy class="text-slate-200" />
-      <p class="text-yellow-300 font-semibold absolute right-0 top-0">CSS</p>
+      <IconCopy class="text-red-300" />
+      <p class="text-red-300 text-xs font-semibold absolute right-1 top-0">CSS</p>
     </button>
     <button
       button-copy-to-tailwind
       value={backgroundTW}
-      class="rounded-md hover:cursor-pointer hover:scale-110 p-2 backdrop-brightness-50"
+      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
     >
-      <IconCopy class="text-slate-200" />
-      <p class="text-blue-300 font-semibold absolute right-0 top-0">TW</p>
+      <IconCopy class="text-blue-300" />
+      <p class="text-blue-300 text-xs font-semibold absolute right-1 top-0">TW</p>
     </button>
   </footer>
 </article>
