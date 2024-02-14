@@ -13,8 +13,8 @@ const { backgroundTW, backgroundCSS } = Astro.props;
       class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
       value={backgroundTW}
     >
-      <IconPreview class="text-purple-300" />
-      <p class="text-purple-300 text-xs font-semibold absolute right-1 top-0">VER</p>
+      <IconPreview class="text-violet-300" />
+      <p class="text-violet-300 text-xs font-semibold absolute right-1 top-0">VER</p>
       
     </button>
     <button
@@ -22,14 +22,15 @@ const { backgroundTW, backgroundCSS } = Astro.props;
       value={backgroundCSS}
       class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
     >
-      <IconCopy class="text-red-300" />
-      <p class="text-red-300 text-xs font-semibold absolute right-1 top-0">CSS</p>
+      <IconCopy class="text-fuchsia-300" />
+      <p class="text-fuchsia-300 text-xs font-semibold absolute right-1 top-0">CSS</p>
     </button>
     <button
       button-copy-to-tailwind
       value={backgroundTW}
-      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
+      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50 "
     >
+      
       <IconCopy class="text-blue-300" />
       <p class="text-blue-300 text-xs font-semibold absolute right-1 top-0">TW</p>
     </button>
