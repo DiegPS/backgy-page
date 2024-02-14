@@ -1,61 +1,47 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
+import IconCopy from "../components/IconCopy.astro"
+import IconPreview from "../components/IconPreview.astro"
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<article content-to-copy class="relative min-h-72 w-full overflow-hidden shadow-xl rounded-md">
+    <slot />
+    <footer class="flex justify-end gap-1">
+        <button button-preview class="rounded-md hover:cursor-pointer p-1 backdrop-brightness-50">
+            <IconPreview  class="text-slate-200"/>
+        </button>
+        <button button-copy class="hover:cursor-pointer p-1 backdrop-brightness-50">
+            <IconCopy  class="text-slate-200  "/>
+        </button>
+    </footer>
+</article>
+<script>
+  const preview = document.querySelectorAll('[button-preview]');
+
+  const copy = document.querySelectorAll('[button-copy]');
+  
+  const replace = document.querySelectorAll('[div-replace]');
+  preview.forEach((button) => {
+      button.addEventListener('click', () => {
+        const contentToCopy = document.querySelectorAll('[content-to-copy]');
+        console.log("hello")
+        console.log(replace[0])
+        console.log(contentToCopy[0], "acaaa!!!")
+        replace[0].innerHTML = `<div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>`
+        console.log(replace[0])
+
+    });
+  });
+
+copy.forEach((button) => {
+  button.addEventListener('click', () => {
+      console.log("hello")
+  });
+});
+
+replace.forEach((button) => {
+  button.addEventListener('click', () => {
+      console.log("hello")
+  });
+});
+
+</script>
