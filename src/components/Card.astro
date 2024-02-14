@@ -10,6 +10,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
   <footer class="absolute right-0 flex gap-1 z-10 mr-1 mt-1">
     <button
       button-preview
+      aria-label="Preview Background in this page"
       class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
       value={backgroundTW}
     >
@@ -20,6 +21,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
     <button
       button-copy-to-css
       value={backgroundCSS}
+      aria-label="Copy this background in CSS format"
       class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
     >
       <IconCopy class="text-fuchsia-300" />
@@ -28,6 +30,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
     <button
       button-copy-to-tailwind
       value={backgroundTW}
+      aria-label="Copy this background in Tailwind format"
       class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50 "
     >
       <IconCopy class="text-blue-300" />
