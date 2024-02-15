@@ -14,8 +14,8 @@ const { backgroundTW, backgroundCSS } = Astro.props;
       class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
       value={backgroundTW}
     >
-      <IconPreview class="text-violet-300" />
-      <p class="text-violet-300 text-xs font-semibold absolute right-1 top-0">PW</p>
+      <IconPreview class="text-zinc-300" />
+      <p class="text-zinc-300 text-xs font-semibold absolute right-1 top-0">PW</p>
       
     </button>
     <button
@@ -50,7 +50,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
   preview.forEach((button: any) => {
     button.addEventListener("click", () => {
       if (replace) {
-        replace.innerHTML = button.value;
+        replace.innerHTML = `<div class="fixed left-0 top-0 -z-10 h-full w-full">${button.value}</div>`;
       }
     });
   });
