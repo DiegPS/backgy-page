@@ -6,35 +6,36 @@ const { backgroundTW, backgroundCSS } = Astro.props;
 ---
 
 <article class="relative min-h-72 w-full overflow-hidden rounded-md">
-  <Fragment set:html={backgroundTW} />
+    <Fragment set:html={backgroundTW} />
+
   <footer class="absolute right-0 flex gap-1 z-10 mr-1 mt-1">
     <button
       button-preview
       aria-label="Preview Background in this page"
-      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
+      class="rounded-md p-2 bg-zinc-800 hover:cursor-pointer transition hover:scale-110 "
       value={backgroundTW}
     >
       <IconPreview class="text-zinc-300" />
-      <p class="text-zinc-300 text-xs font-semibold absolute right-1 top-0">PW</p>
+      <p class="text-zinc-300 text-xs font-semibold  right-1 top-0">PW</p>
       
     </button>
     <button
       button-copy-to-css
       value={backgroundCSS}
       aria-label="Copy this background in CSS format"
-      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50"
+      class="rounded-md p-2 bg-zinc-800 hover:cursor-pointer transition hover:scale-110 "
     >
-      <IconCopy class="text-fuchsia-300" />
-      <p class="text-fuchsia-300 text-xs font-semibold absolute right-1 top-0">CSS</p>
+    <IconCopy class="text-fuchsia-300" />
+    <p class="text-fuchsia-300 text-xs font-semibold  right-1 top-0">CSS</p>
     </button>
     <button
       button-copy-to-tailwind
       value={backgroundTW}
       aria-label="Copy this background in Tailwind format"
-      class="rounded-md hover:cursor-pointer transition hover:scale-110 p-2 backdrop-brightness-50 "
+      class="rounded-md p-2 bg-zinc-800 hover:cursor-pointer transition hover:scale-110  "
     >
       <IconCopy class="text-blue-300" />
-      <p class="text-blue-300 text-xs font-semibold absolute right-1 top-0">TW</p>
+      <p class="text-blue-300 text-xs font-semibold  right-1 top-0">TW</p>
     </button>
   </footer>
 </article>
@@ -56,7 +57,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
   });
   function copyToClipboard(element: any) {
     element.addEventListener("click", () => {
-      navigator.clipboard.writeText(element.value);
+      navigator.clipboard.writeText(`<div class="fixed left-0 top-0 -z-10 h-full w-full">${element.value}</div>`);
     });
   }
   copyCSS.forEach(copyToClipboard);
