@@ -20,6 +20,10 @@ export const backgrounds = [
         background_css: ""
     },
     {
+        background_tailwind: `<div class="absolute h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div></div>`,
+        background_css: ``
+    },
+    {
         background_tailwind: `<div class="absolute top-0 -z-10 h-full w-full bg-white"><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>`,
         background_css: ``
     },
@@ -69,10 +73,6 @@ export const backgrounds = [
     },
     {
         background_tailwind: `<div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>`,
-        background_css: ``
-    },
-    {
-        background_tailwind: `<div class="absolute h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div></div>`,
         background_css: ``
     },
     {
