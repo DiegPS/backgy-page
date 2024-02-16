@@ -3,7 +3,7 @@ import Card from "./Card.astro";
 import {backgrounds} from "./backgrounds"
 ---
 
-<section class="grid gap-4 mb-9 grid-cols-[repeat(auto-fill,_minmax(15rem,_1fr))]">
+<section class="gap-6 p-4 lg:p-0 grid lg:gap-4 mb-9 grid-cols-[repeat(auto-fill,_minmax(15rem,_1fr))]">
     {
         backgrounds.map((e)=>(
             <Card backgroundTW={e.background_tailwind}
