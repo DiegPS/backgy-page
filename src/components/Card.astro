@@ -58,18 +58,18 @@ const { backgroundTW, backgroundCSS } = Astro.props;
   function copyToClipboardTW(element: any) {
     element.addEventListener("click", () => {
       navigator.clipboard.writeText(`<div class="fixed left-0 top-0 -z-10 h-full w-full">${element.value}</div>`);
-      element.classList.add("bg-green-500");
+      element.classList.add("bg-green-600");
       setTimeout(function() {
-        element.classList.remove("bg-green-500");
+        element.classList.remove("bg-green-600");
       }, 1000);
     });
   }
   function copyToClipboardCSS(element: any) {
     element.addEventListener("click", () => {
       navigator.clipboard.writeText(`<div style="position:fixed; z-index: -1; top:0px; left:0px; height:100%; width:100%;">${element.value}</div>`);
-      element.classList.add("bg-green-500");
+      element.classList.add("bg-green-600");
       setTimeout(function() {
-        element.classList.remove("bg-green-500");
+        element.classList.remove("bg-green-600");
       }, 1000);
         });
   }
