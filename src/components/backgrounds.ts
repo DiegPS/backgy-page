@@ -5,7 +5,7 @@ interface Backgrounds {
 export const backgrounds:Backgrounds[] = [
     {
         background_tailwind:`<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>`,
-        background_css: ""
+        background_css: `<div style="position: absolute; top: 0; z-index: -1; height: 100%; width: 100%; background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0)), #0a0a0a;"></div>`
     },
     {
         background_tailwind:`<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950" style="background-image:linear-gradient(38.73deg, rgba(204, 0, 187, 0.25) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.25) 100%)"></div>`,
@@ -118,55 +118,8 @@ export const backgrounds:Backgrounds[] = [
         background_css: ``
     },
     {
-        background_tailwind: ``,
-        background_css: ``
+        background_tailwind: `<div class="absolute w-full h-full bg-gradient-to-br from-emerald-300 to-teal-900"></div>`,
+        background_css: `<div
+        style="position:absolute; width:100%; height:100%; background-image: linear-gradient(140deg, rgb(72, 145, 161) 25%, rgb(0, 49, 61) 90%);"></div>`
     },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    },
-    {
-        background_tailwind: ``,
-        background_css: ``
-    }
 ]

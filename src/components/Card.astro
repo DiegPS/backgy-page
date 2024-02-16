@@ -19,7 +19,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
       <p class="text-zinc-300 text-xs font-semibold right-1 top-0">PW</p>
       
     </button>
-    <button
+    {backgroundCSS.length > 10 && <button
       button-copy-to-css
       value={backgroundCSS}
       aria-label="Copy this background in CSS format"
@@ -27,8 +27,8 @@ const { backgroundTW, backgroundCSS } = Astro.props;
     >
     <IconCopy class="text-fuchsia-300" />
     <p class="text-fuchsia-300 text-xs font-semibold  right-1 top-0">CSS</p>
-    </button>
-    <button
+    </button>}
+    {backgroundTW.length > 10 && <button
       button-copy-to-tailwind
       value={backgroundTW}
       aria-label="Copy this background in Tailwind format"
@@ -36,7 +36,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
     >
       <IconCopy class="text-blue-300" />
       <p class="text-blue-300 text-xs font-semibold  right-1 top-0">TW</p>
-    </button>
+    </button>}
   </footer>
 </article>
 <script>
