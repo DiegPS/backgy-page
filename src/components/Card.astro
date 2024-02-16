@@ -16,7 +16,7 @@ const { backgroundTW, backgroundCSS } = Astro.props;
       value={backgroundTW}
     >
       <IconPreview class="text-zinc-300" />
-      <p class="text-zinc-300 text-xs font-semibold  right-1 top-0">PW</p>
+      <p class="text-zinc-300 text-xs font-semibold right-1 top-0">PW</p>
       
     </button>
     <button
@@ -55,11 +55,24 @@ const { backgroundTW, backgroundCSS } = Astro.props;
       }
     });
   });
-  function copyToClipboard(element: any) {
+  function copyToClipboardTW(element: any) {
     element.addEventListener("click", () => {
       navigator.clipboard.writeText(`<div class="fixed left-0 top-0 -z-10 h-full w-full">${element.value}</div>`);
+      element.classList.add("bg-green-500");
+      setTimeout(function() {
+        element.classList.remove("bg-green-500");
+      }, 1000);
     });
   }
-  copyCSS.forEach(copyToClipboard);
-  copyTW.forEach(copyToClipboard);
+  function copyToClipboardCSS(element: any) {
+    element.addEventListener("click", () => {
+      navigator.clipboard.writeText(`<div style="position:fixed; z-index: -1; top:0px; left:0px; height:100%; width:100%;">${element.value}</div>`);
+      element.classList.add("bg-green-500");
+      setTimeout(function() {
+        element.classList.remove("bg-green-500");
+      }, 1000);
+        });
+  }
+  copyCSS.forEach(copyToClipboardCSS);
+  copyTW.forEach(copyToClipboardTW);
 </script>
