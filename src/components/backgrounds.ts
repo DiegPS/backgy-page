@@ -20,9 +20,9 @@ export const backgrounds:Backgrounds[] = [
         background_css: ""
     },
     {
-        background_tailwind: `    <div class="absolute w-full h-full bg-zinc-900 ">
-        <div class="absolute top-1/4 left-1/2 h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,255,242,0.15),rgba(255,255,255,0))]"></div>
-              <div class="absolute bottom-1/4 right-1/2 h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,255,242,0.15),rgba(255,255,255,0))]"></div>
+        background_tailwind: `<div class="absolute w-full h-full bg-[#0b0d13]">
+        <div class="absolute bottom-0 right-[-10%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,200,255,0.15),rgba(255,255,255,0))]"></div>
+        <div class="absolute bottom-0 left-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,255,242,0.15),rgba(255,255,255,0))]"></div>
       </div>`,
         background_css: `<div style="background-color:#0b0d13; width:100%; height:100%; position:absolute; ">
         <div style="
