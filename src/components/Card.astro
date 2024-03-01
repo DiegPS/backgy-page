@@ -3,17 +3,19 @@ import IconCopy from "../components/IconCopy.astro";
 import IconPreview from "../components/IconPreview.astro";
 
 const { backgroundTW, backgroundCSS } = Astro.props;
+
+const availableBackground = backgroundTW.length > 5 ? backgroundTW : backgroundCSS
 ---
 
 <article class="relative min-h-72 w-full overflow-hidden rounded-md">
-    <Fragment set:html={backgroundTW.length > 5 ? backgroundTW : backgroundCSS} />
+    <Fragment set:html={availableBackground} />
 
   <footer class="absolute right-0 flex gap-1 z-10 mr-1 mt-1">
     <button
       button-preview
       aria-label="Preview Background in this page"
       class="rounded-md p-2 bg-zinc-800 hover:cursor-pointer transition hover:scale-110 "
-      value={backgroundTW.length > 5 ? backgroundTW : backgroundCSS}
+      value={availableBackground}
     >
       <IconPreview class="text-zinc-300" />
       <p class="text-zinc-300 text-xs font-semibold right-1 top-0">PW</p>
